@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>网易云音乐下载</title>
+  <style>
+    body {
+      width: 220px;
+      padding: 15px;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      text-align: center;
+    }
+    #downloadBtn {
+      width: 100%;
+      padding: 10px;
+      background-color: #e83e3e;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    #downloadBtn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    #tip {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #666;
+    }
+    .error {
+      color: #e83e3e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button id="downloadBtn">一键下载当前歌曲</button>
+    <div id="tip">请确保在网易云音乐歌曲页面使用</div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+/* 自定义下载按钮样式，和网易云风格统一 */
+#custom-music-download-btn {
+    background-color: #e83e3e !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 4px !important;
+    padding: 8px 16px !important;
+    margin-left: 10px !important;
+    cursor: pointer !important;
+    font-size: 14px !important;
+    height: 32px !important;
+    line-height: 14px !important;
+  }
+  
+  #custom-music-download-btn:hover {
+    background-color: #d03030 !important;
+  }
+  
+  /* 提示框样式 */
+  #custom-download-tip {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    border-radius: 4px;
+    z-index: 999999;
+    display: none;
+  }
