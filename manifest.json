@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "网易云音乐一键下载",
-    "version": "1.2",
+    "version": "1.0",
     "description": "网易云网页版自动替换下载按钮，一键下载歌曲",
     "permissions": ["activeTab", "tabs", "scripting", "clipboardWrite", "downloads"],
     "background": {
