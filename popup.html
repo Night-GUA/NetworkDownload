@@ -12,48 +12,150 @@
     }
 
     body {
-      width: 260px;
-      min-height: 120px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+      width: 320px;
+      min-height: 180px;
+      background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+      padding: 0;
+    }
+
+    /* 顶部红色标题栏 - 网易云风格 */
+    .header {
+      background: linear-gradient(90deg, #c62f2f 0%, #d43c33 100%);
+      padding: 16px 20px;
+      color: white;
+      border-radius: 0 0 16px 16px;
+      box-shadow: 0 4px 12px rgba(198, 47, 47, 0.2);
+    }
+
+    .header-title {
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .header-title::before {
+      content: '🎵';
+      font-size: 18px;
+    }
+
+    /* 内容区域 */
+    .container {
       padding: 20px;
     }
 
-    .container {
-      text-align: center;
-      width: 100%;
+    /* 歌曲信息卡片 */
+    .song-card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      border: 1px solid #f0f0f0;
     }
 
-    .title {
-      font-size: 16px;
+    .song-name {
+      font-size: 18px;
       font-weight: 600;
       color: #333;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
+      line-height: 1.4;
     }
 
-    #tip {
+    .artist-name {
+      font-size: 14px;
+      color: #666;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .artist-name::before {
+      content: '🎤';
+      font-size: 12px;
+    }
+
+    /* 提示信息 */
+    .tip-box {
+      background: #f8f8f8;
+      border-radius: 8px;
+      padding: 12px 16px;
       font-size: 13px;
       color: #666;
       line-height: 1.6;
+      border-left: 3px solid #c62f2f;
     }
 
-    .success {
+    .tip-box b {
       color: #c62f2f;
+      font-weight: 600;
     }
 
-    .error {
+    /* 错误状态 */
+    .error-box {
+      background: #fff5f5;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 13px;
       color: #c62f2f;
+      line-height: 1.6;
+      border-left: 3px solid #c62f2f;
+    }
+
+    .error-box a {
+      color: #c62f2f;
+      text-decoration: underline;
+    }
+
+    /* 加载动画 */
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: #999;
+      font-size: 14px;
+      padding: 20px;
+    }
+
+    .loading::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      border: 2px solid #f0f0f0;
+      border-top-color: #c62f2f;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* 底部装饰 */
+    .footer {
+      text-align: center;
+      padding: 12px;
+      font-size: 11px;
+      color: #ccc;
+      border-top: 1px solid #f0f0f0;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="title">🎵 网易云音乐下载</div>
-    <div id="tip">请在歌曲页面点击<br><b>分享按钮旁的"一键下载"按钮</b></div>
+  <div class="header">
+    <div class="header-title">网易云音乐下载</div>
   </div>
+
+  <div class="container">
+    <div id="content">
+      <div class="loading">正在检测页面...</div>
+    </div>
+  </div>
+
+  <div class="footer">一键下载网易云音乐</div>
 
   <script src="popup.js"></script>
 </body>
