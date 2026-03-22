@@ -28,13 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
   
       if (!url.includes('music.163.com') || !songId) {
         downloadBtn.disabled = true;
-        tip.textContent = '❌ 请先打开网易云音乐歌曲页面';
+        tip.innerHTML = '❌ 请先打开<a href="https://music.163.com/#/song?id=3346403321" target="_blank">网易云音乐歌曲</a>页面';
         tip.className = 'error';
         return;
       }
   
       downloadBtn.disabled = false;
-      tip.textContent = '✅ 点击复制下载链接';
+      tip.textContent = '✅ 点击复制MP3文件链接并一键下载';
       tip.className = '';
   
       downloadBtn.addEventListener('click', async () => {
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // 复制到剪贴板
           await navigator.clipboard.writeText(downloadUrl);
           
-          tip.textContent = '✅ 链接已复制！粘贴到浏览器地址栏后右键保存音频';
+          tip.innerHTML = '✅ 链接已复制并尝试下载！<br>若失败，请使用下载链接';
           tip.className = '';
   
           // 可选：自动打开外链页面（辅助用户）
