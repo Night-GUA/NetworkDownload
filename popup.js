@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     function getSongName() {
                         const titleMatch = document.title.match(/^(.+?)(?:\s+-\s+.+)?\s+-\s+网易云音乐$/);
                         if (titleMatch) {
-                            const name = titleMatch[1].trim();
+                            const name = titleMatch[1].trim(); 
                             if (name && name.length > 0 && name.length < 100) return name;
                         }
                         return null;
