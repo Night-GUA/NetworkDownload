@@ -12,8 +12,8 @@
     }
 
     body {
-      width: 280px;
-      min-height: 150px;
+      width: 260px;
+      min-height: 120px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -27,79 +27,21 @@
       width: 100%;
     }
 
-    /* 按钮样式 */
-    .button {
-      display: inline-block;
-      position: relative;
-      z-index: 1;
-      overflow: hidden;
-      text-decoration: none;
-      font-weight: 600;
+    .title {
       font-size: 16px;
-      padding: 12px 24px;
-      color: #c62f2f;
-      border: 0.15em solid #c62f2f;
-      border-radius: 2em;
-      transition: 4s;
-      cursor: pointer;
-      background: transparent;
-      outline: none;
-      width: 100%;
-    }
-
-    .button:before,
-    .button:after {
-      content: "";
-      position: absolute;
-      top: -1.5em;
-      z-index: -1;
-      width: 200%;
-      aspect-ratio: 1;
-      border: none;
-      border-radius: 40%;
-      background-color: rgba(198, 47, 47, 0.25);
-      transition: 4s;
-    }
-
-    .button:before {
-      left: -80%;
-      transform: translate3d(0, 5em, 0) rotate(-340deg);
-    }
-
-    .button:after {
-      right: -80%;
-      transform: translate3d(0, 5em, 0) rotate(390deg);
-    }
-
-    .button:hover,
-    .button:focus {
-      color: white;
-    }
-
-    .button:hover:before,
-    .button:hover:after,
-    .button:focus:before,
-    .button:focus:after {
-      transform: none;
-      background-color: rgba(198, 47, 47, 0.9);
-    }
-
-    .button:disabled {
-      color: #999;
-      border-color: #999;
-      cursor: not-allowed;
-    }
-
-    .button:disabled:before,
-    .button:disabled:after {
-      display: none;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 12px;
     }
 
     #tip {
-      margin-top: 15px;
-      font-size: 12px;
+      font-size: 13px;
       color: #666;
-      line-height: 1.5;
+      line-height: 1.6;
+    }
+
+    .success {
+      color: #c62f2f;
     }
 
     .error {
@@ -109,8 +51,8 @@
 </head>
 <body>
   <div class="container">
-    <button id="downloadBtn" class="button">一键下载</button>
-    <div id="tip">请确保在网易云音乐歌曲页面使用</div>
+    <div class="title">🎵 网易云音乐下载</div>
+    <div id="tip">请在歌曲页面点击<br><b>分享按钮旁的"一键下载"按钮</b></div>
   </div>
 
   <script src="popup.js"></script>
