@@ -50,10 +50,6 @@ http://music.163.com/song/media/outer/url?id={歌曲ID}.mp3
 - ⚠️ 需要登录网易云音乐账号才能下载歌曲
 - ⚠️ 下载成功率受网易云音乐服务器限制影响
 
-## 致谢
-
-- [按钮波浪动画样式代码](https://www.bilibili.com/read/cv25883668/?spm_id_from=333.788&opus_fallback=1)来自 [**B站：山羊の前端小窝**（UID:266664645）](https://space.bilibili.com/266664645)
-
 ## 维护说明
 
 这个仓库的代码支持是尽力而为的，如果您有更好的建议或者提案请随时提交 Issue 或 PR :)
